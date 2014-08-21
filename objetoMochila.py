@@ -30,8 +30,8 @@ class ObjetoMochila(ComparableMixin):
 	Guarda un peso, un valor y un nombre"""
 	def __init__(self, nombre,valor,peso):
 		self.nombre = nombre
-		self.valor = valor
-		self.peso = peso
+		self.valor = float(valor)
+		self.peso = float(peso)
 
 	def _cmpkey(self):
 		return self.valor/self.peso
